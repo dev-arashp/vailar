@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/style.css" rel="stylesheet" />
+    <title>Vite App</title>
+</head>
+
+<body class="font-Vazir bg-stone-50 text-stone-800 m-0 p-0  flex flex-col items-center justify-center ">
+    <div class="w-full  px-80 flex justify-end h-52 items-end">
+        <a href="./index.html" class="px-6 rounded-lg py-1 mb-2 ml-4 flex gap-2 text-sm">
+            بازگشت
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+    </div>
+    <div class="w-[60%]   flex  items-center  gap-14 bg-white rounded-lg pr-8 shadow-md">
+
+        <div class=" flex flex-col gap-4">
+            <div class="flex flex-col justify-center items-center ml-32 gap-3 mr-6">
+                <div class="flex flex-col gap-3 my-3">
+
+
+                    <div class="flex flex-col gap-2">
+                        <span class="pr-1 text-sm">نام</span>
+                        <input
+                            class="w-96 rounded-lg text-sm hover:border hover:border-neutral-400 border border-stone-300 ring-0 bg-neutral-200"
+                            type="text">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="pr-1  text-sm">نام خانوادگی</span>
+                        <input
+                            class="w-96 rounded-lg text-sm hover:border hover:border-neutral-400 border border-stone-300 ring-0 bg-neutral-200"
+                            type="text">
+                    </div>
+
+                    <div class="flex flex-col gap-2"> <span for="phone"
+                            class="block  text-sm font-medium text-stone-700"> شماره
+                            تماس</span>
+                        <input type="number" name="phone-number" id="phone"
+                            class="bg-neutral-200 border no-spinner border-stone-300  text-left hover:bg-neutral-300 ring-0 text-stone-700 text-sm rounded-lg  block w-full p-2.5"
+                            placeholder=". . . . . . . 9 0" required="">
+                        <span class="text-xs pr-1  text-red-600 hidden" id="error-span">مقدار وارد شده صحیح نمی
+                            باشد</span>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col gap-3">
+
+
+                    <div class="flex flex-col gap-2">
+                        <span class="pr-1 text-sm">ایمیل</span>
+                        <input
+                            class="w-96 rounded-lg border text-sm text-stone-700 ring-0 text-left hover:border hover:border-neutral-400 border-stone-300 bg-neutral-200"
+                            type="email" placeholder="username@gmail.com">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="pr-1 text-stone-700 text-sm">رمز</span>
+                        <input
+                            class="w-96 rounded-lg border text-sm text-stone-700 ring-0 text-left hover:border hover:border-neutral-400 border-stone-300 bg-neutral-200"
+                            type="password">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="pr-1  text-sm"> تایید رمز</span>
+                        <input
+                            class="w-96 rounded-lg border text-sm text-stone-700 ring-0 text-left hover:border hover:border-neutral-400 border-stone-300 bg-neutral-200"
+                            type="password">
+                    </div>
+
+                </div>
+
+                <a href="./panelUser.html">
+                    <button id="submit"
+                        class="block text-white bg-slate-800 hover:bg-slate-900 e  font-medium rounded-lg text-sm px-10 py-2.5  text-center w-96"
+                        type="submit">
+                        ثبت نام
+                    </button>
+
+                    <div id="popup-modal" tabindex="-1"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                        style="background-color: rgba(0, 0, 0, 0.338); backdrop-filter: blur(10px);">
+                        <div class="p-4 w-full max-w-md max-h-full">
+                            <div class="relative bg-neutral-300 rounded-lg shadow-sm ">
+                                <button type="button"
+                                    class="absolute top-3 end-2.5 text-stone-700 bg-transparent  hover:text-stone-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+                                    data-modal-hide="popup-modal">
+
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                                <div class="p-4 md:p-5 text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-check-circle mx-auto mb-4 text-green-600 w-12 h-12 "
+                                        viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path
+                                            d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                                    </svg>
+                                    <h3 class="mb-5 text-lg font-normal text-stone-700 ">
+                                        خوش‌ آمدید </h3>
+                                    <button data-modal-hide="popup-modal" id="done-button" type="button"
+                                        class="text-white bg-green-600 hover:bg-green-700 transition-all duration-300 font-medium rounded-lg text-sm inline-flex items-center px-10 py-2.5 text-center">
+                                        ورود
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+
+        </div>
+
+        <div><img class="rounded-l-lg h" src="/img/login (1).jpg" alt=""></div>
+
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

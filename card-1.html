@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <title>Vite App</title>
+  </head>
+  <body class="font-Vazir bg-stone-50 text-shadow-stone-800 m-0 p-0">
+    <section>
+      <div>
+        <img
+          class="w-full absolute block h-80"
+          src="/img/slider-1.jpg"
+          alt=""
+        />
+      </div>
+
+      <!-- Start Nav -->
+      <nav
+        class="fixed shadow shadow-stone-300 top-3 left-0 right-0 z-50 h-20 rounded-xl mx-48 bg-white flex items-center m-auto p-5 py-6 justify-between"
+      >
+        <img src="/img/logo.png" alt="" />
+        <ul class="flex gap-4">
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./index.html">صفحه اصلی</a>
+          </li>
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./servises.html">خدمات ما</a>
+          </li>
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./projects.html">پروژه ها</a>
+          </li>
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./soalatmotdavel.html">سوالات متداول</a>
+          </li>
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./veblog.html">وبلاگ</a>
+          </li>
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./about.html"><a href="./about.html">درباره ما</a></a>
+          </li>
+          <li class="text-lg font-Vazir-Thin text-stone-800">
+            <a href="./cuntactUs.html">تماس با ما</a>
+          </li>
+        </ul>
+
+        <div class="flex items-center justify-center">
+          <div>
+            <button
+              data-tooltip-target="tooltip-default"
+              type="button"
+              class="focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-center mt-2"
+            >
+              <a href="./login.html">
+                <svg
+                  class="tetx-[#44403c]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                  class="bi bi-person"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                  />
+                </svg>
+              </a>
+            </button>
+
+            <div
+              id="tooltip-default"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-slate-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"
+            >
+              حساب کاربری
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+
+          <button
+            data-modal-target="popup-modal"
+            data-modal-toggle="popup-modal"
+            class="block focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            type="button"
+          >
+            <svg
+              class="tetx-[#44403c]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
+
+          <div
+            id="popup-modal"
+            tabindex="-1"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          >
+            <div class="relative p-4 w-full max-w-md max-h-full">
+              <div class="relative bg-white rounded-lg shadow-sm dark:bg-white">
+                <button
+                  type="button"
+                  class="absolute top-3 end-2.5 text-slate-900 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                  data-modal-hide="popup-modal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                </button>
+                <div class="p-4 md:p-5 text-center">
+                  <h3
+                    class="mb-5 text-lg font-normal text-slate-900 text-right"
+                  >
+                    جستجو کنید...
+                  </h3>
+                  <input
+                    class="mb-5 text-lg font-normal text-gray-500 border border-slate-900 rounded-xl w-96"
+                    placeholder="سرچ کنید"
+                    type="search"
+                  />
+                  <div class="flex justify-center w-full">
+                    <button
+                      data-modal-hide="popup-modal"
+                      type="button"
+                      class="py-3 px-10 text-sm font-medium bg-slate-900 focus:outline-none rounded-lg border focus:z-10 focus:ring-4 text-white"
+                    >
+                      جستجو
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- End Of Nav -->
+
+      <!-- Start News -->
+
+      <section class="pt-96 px-48 flex gap-3 pb-10">
+        <div class="w-[35%]">
+          <div class="bg-white p-4 rounded-xl">
+            <div class="bg-[#facc14] rounded-xl pr-1">
+              <div class="py-3 bg-[#f1f5f9] rounded-xl">
+                <span class="pr-3 text-xl">پربازدیدترین ها</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 py-5">
+              <div class="flex gap-3 items-center">
+                <img
+                  class="rounded-full w-16 h-16"
+                  src="/img/blog-2.jpg"
+                  alt=""
+                />
+                <div class="flex flex-col">
+                  <span class="text-base"> جذاب ترین ایده دکوراسیون</span>
+                  <span class="text-sm font-Vazir-Thin"
+                    >لورم ایپسوم متن ساختگی</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img class="rounded-full w-16 h-16" src="/img/1.jpg" alt="" />
+                <div class="flex flex-col">
+                  <span class="text-base"> 5 مدل مبلمان فضای بسته</span>
+                  <span class="text-sm font-Vazir-Thin"
+                    >لورم ایپسوم متن ساختگی</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img
+                  class="rounded-full w-16 h-16"
+                  src="/img/blog-4.jpg"
+                  alt=""
+                />
+                <div class="flex flex-col">
+                  <span class="text-base"> زیبا ترین گل های آپارتمانی</span>
+                  <span class="text-sm font-Vazir-Thin"
+                    >لورم ایپسوم متن ساختگی</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img
+                  class="rounded-full w-16 h-16"
+                  src="/img/blog-5.jpg"
+                  alt=""
+                />
+                <div class="flex flex-col">
+                  <span class="text-base"> زیبا ترین گل های آپارتمانی</span>
+                  <span class="text-sm font-Vazir-Thin"
+                    >لورم ایپسوم متن ساختگی</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-xl my-3">
+            <div class="bg-[#facc14] rounded-xl pr-1">
+              <div class="py-3 bg-[#f1f5f9] rounded-xl">
+                <span class="pr-3 text-xl">دسته بندی</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 px-6 pt-7 pb-4">
+              <span class="font-Vazir-Thin"> دسته بندی اول</span>
+              <span class="font-Vazir-Thin"> دسته بندی دوم</span>
+              <span class="font-Vazir-Thin"> دسته بندی سوم</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="bg-white p-4 rounded-xl">
+            <div class="bg-[#facc14] rounded-xl pr-1">
+              <div class="py-3 bg-[#f1f5f9] rounded-xl">
+                <span class="pr-4 text-xl"
+                  >لورم ایپسوم متن ساختگی با تولید سادگی</span
+                >
+                <div class="flex gap-4 pr-4 pt-2">
+                  <div class="flex items-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-clock"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                      />
+                      <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                      />
+                    </svg>
+                    <span class="font-Vazir-Thin">14 تیر 1402</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-folder"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z"
+                      />
+                    </svg>
+                    <span class="font-Vazir-Thin">کسب و کار</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-4">
+              <img class="rounded-xl" src="/img/5.jpg" alt="" />
+            </div>
+            <div class="flex flex-col gap-5 pb-4">
+              <span class="leading-8 font-Vazir-Thin"
+                >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span
+              >
+              <span class="leading-8 font-Vazir-Thin"
+                >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span
+              >
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="text-2xl font-Vazir-Bold text-shadow-slate-800"
+                >نظرات</span
+              >
+              <p>شما با نام یاسمن وارد شده اید!!</p>
+              <textarea
+                class="w-full h-36 border border-stone-300 rounded-xl p-4 ring-0 hover:border-stone-400"
+                placeholder="نطر خود را بنویسید"
+              ></textarea>
+              <button
+                class="bg-slate-700 hover:bg-slate-800 transition-all duration-500 w-fit px-5 py-3 rounded-xl text-white"
+              >
+                ارسال پیام
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End Of News -->
+    </section>
+
+    <!-- Start Footer -->
+
+    <footer class="bg-slate-800 px-48 py-10 flex">
+      <div class="w-80 flex flex-col gap-3">
+        <img class="w-40" src="/img/logo-footer.png" alt="" />
+        <p class="text-white leading-8">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است،
+        </p>
+      </div>
+      <div class="flex flex-col text-center gap-2 pr-28">
+        <span class="text-white text-lg pb-6">دسترسی سریع</span>
+        <span class="text-white">صفحه اصلی</span>
+        <span class="text-white">درباره ما</span>
+        <span class="text-white">تماس با ما</span>
+        <span class="text-white">پروژه ها</span>
+        <span class="text-white">خدمات</span>
+      </div>
+      <div class="flex flex-col text-center gap-2 pr-52">
+        <span class="text-white text-lg pb-6">خدمات شرکت</span>
+        <span class="text-white">جزئیات پروژه</span>
+        <span class="text-white">جزئیات بلاگ</span>
+        <span class="text-white">سابقه فعالیت</span>
+        <span class="text-white">سوالات متداول</span>
+        <span class="text-white">404</span>
+      </div>
+      <div class="flex flex-col gap-8 pr-32">
+        <span class="text-white text-lg">عضویت در خبرنامه </span>
+        <div class="flex flex-col gap-3">
+          <span class="text-white">ایمیل خود را وارد کنید</span>
+
+          <button class="bg-[#facc14] pl-3 rounded-lg">
+            <input class="bg-white w-64 h-10 rounded-r-lg ml-3" type="email" />
+            ثبت
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div class="bg-slate-700 flex justify-center py-4">
+      <span class="text-white"
+        >Copyright © 2023 - تمامی حقوق برای راست چین محفوظ می باشد</span
+      >
+    </div>
+
+    <!-- End Of Footer -->
+  </body>
+</html>
